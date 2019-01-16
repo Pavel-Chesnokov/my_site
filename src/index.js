@@ -1,2 +1,2 @@
-//коментарий
-
+import './style.scss'
+debugger;
