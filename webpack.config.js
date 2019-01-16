@@ -6,11 +6,11 @@ const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 module.exports = {
-  mode: "development",
-  entry: "./src/index.js",
+  mode: "production", //"development",
+  entry: "./src/index.ts",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "main.js"
+    filename: "bundle.js"
   },
   /*   devServer: {
     contentBase: path.join(__dirname, "src"),
@@ -22,6 +22,11 @@ module.exports = {
 
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        use: "ts-loader",
+        exclude: /node_modules/
+      },
       {
         test: /\.scss$/,
         use: [
@@ -39,8 +44,7 @@ module.exports = {
             options: {
               sourceMap: true
             }
-          }
- */
+          } */
 
           MiniCssExtractPlugin.loader,
           "css-loader",
@@ -70,6 +74,10 @@ module.exports = {
         ]
       }
     ]
+  },
+
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"]
   },
 
   plugins: [
