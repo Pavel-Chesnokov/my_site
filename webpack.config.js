@@ -6,7 +6,7 @@ const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 module.exports = {
-  mode: "production", //"development",
+  mode: "development", 
   entry: "./src/index.ts",
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -23,6 +23,14 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.pug$/,
+        loader: 'pug-loader',
+        options: {
+          pretty: true
+        }
+
+      },
+      {
         test: /\.tsx?$/,
         use: "ts-loader",
         exclude: /node_modules/
@@ -30,9 +38,10 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          /*           {
-            loader: MiniCssExtractPlugin.loder
-          },
+
+          MiniCssExtractPlugin.loader,
+         //'style-loader',
+
           {
             loader: "css-loader",
             options: {
@@ -44,11 +53,11 @@ module.exports = {
             options: {
               sourceMap: true
             }
-          } */
+          }
 
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "sass-loader"
+          /*           MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "sass-loader" */
         ]
       },
       {
@@ -84,7 +93,8 @@ module.exports = {
     new CleanWebpackPlugin(["./dist/**/*"]),
     new HtmlWebpackPlugin({
       title: "Documents",
-      template: "./src/index.html"
+      template: "./src/index.pug",
+
     }),
 
     new BrowserSyncPlugin({
