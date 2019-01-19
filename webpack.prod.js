@@ -1,4 +1,14 @@
-'use strict';
+ const merge = require('webpack-merge');
+ const common = require('./webpack.common.js');
+
+ module.exports = merge(common, {
+   mode: 'production',
+ });
+
+
+
+
+ 'use strict';
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const path = require("path");
@@ -101,8 +111,8 @@ module.exports = {
 
   plugins: [
     new webpack.DefinePlugin({
-      'NODE_ENV': JSON.stringify('NODE_ENV')}),
-    new CleanWebpackPlugin(["./dist/**/*"]),
+      'process.env.NODE_ENV': JSON.stringify('NODE_ENV')}),
+        new CleanWebpackPlugin(["./dist/**/*"]),
     new HtmlWebpackPlugin({
       title: "Documents",
       template: "./src/index.pug",
@@ -137,6 +147,7 @@ module.exports = {
       canPrint: true
     })
   ]
+  
 };
 
 

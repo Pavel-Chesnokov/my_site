@@ -3,10 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "webpack": "webpack",
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production",
-    "start:dev": "webpack-dev-server"
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "repository": "git@github.com:Pavel-Chesnokov/my_site.git",
   "author": "Pavel Chesnokov <p.chesnokov@gmail.com>",
@@ -31,7 +29,8 @@
     "typescript": "^3.2.2",
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1",
-    "webpack-dev-server": "^3.1.14"
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.2.1"
   },
   "dependencies": {}
 }
