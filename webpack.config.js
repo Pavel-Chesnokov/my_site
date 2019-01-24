@@ -1,6 +1,5 @@
 'use strict';
 
-const NODE_ENV = process.env.NODE_ENV || 'development';
 const path = require("path");
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -11,7 +10,7 @@ const webpack = require('webpack');
 
 
 module.exports = {
- // mode: "development", 
+  mode: "development", 
   entry: "./src/index.ts",
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -23,12 +22,12 @@ module.exports = {
     compress: true,
     port: 9000
   }, */
-  watch: NODE_ENV == 'development',
+  watch: true,
   watchOptions: {
     aggregateTimeout: 150,
     ignored: /node_modules/
   },
-  devtool: NODE_ENV == 'development' ? "inline-cheap-module-source-map": '(none)',
+  devtool: "source-map",
 
   module: {
     rules: [
