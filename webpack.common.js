@@ -1,20 +1,19 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 //const webpack = require('webpack');
 
 module.exports = {
   entry: {
     app: './src/index.ts'
   },
-  plugins: [
-    new CleanWebpackPlugin(["./dist/**/*"]),
-    new HtmlWebpackPlugin({
-      title: "Documents",
-      template: "./src/index.pug"
-    })
-  ],
+
+  output: {
+    filename: "[name].bundle.js",
+    path: path.resolve(__dirname, "dist")
+  },
 
   module: {
     rules: [
@@ -78,6 +77,12 @@ module.exports = {
 
   plugins: [
 
+    new CleanWebpackPlugin(["dist"]),
+    new HtmlWebpackPlugin({
+      title: "Documents",
+      template: "./src/index.pug"
+    }),
+
     /*     new BrowserSyncPlugin({
           host: "localhost",
           port: 3000,
@@ -106,8 +111,5 @@ module.exports = {
     })
   ],
 
-  output: {
-    filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist")
-  },
+
 };
