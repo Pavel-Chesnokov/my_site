@@ -2,17 +2,19 @@
   "name": "my_site",
   "version": "1.0.0",
   "main": "index.js",
+  "browserslist": [
+    "> 1%",
+    "last 3 versions"
+  ],
   "scripts": {
     "start": "webpack-dev-server --open --config webpack.dev.js",
-    "start2": "webpack ----config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
-    "server": "node server.js",
-    "webpack": "webpack"
+    "build": "webpack --config webpack.prod.js"
   },
   "repository": "https://github.com/Pavel-Chesnokov/my_site.git",
   "author": "Pavel Chesnokov <p.chesnokov@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "autoprefixer": "^9.4.7",
     "browser-sync": "^2.26.3",
     "browser-sync-webpack-plugin": "^2.2.2",
     "clean-webpack-plugin": "^1.0.0",
@@ -24,6 +26,7 @@
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-loader": "^3.0.0",
     "pug": "^2.0.3",
     "pug-loader": "^2.4.0",
     "sass-loader": "^7.1.0",

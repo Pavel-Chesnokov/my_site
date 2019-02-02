@@ -2,6 +2,7 @@ const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 //const webpack = require('webpack');
 
 
@@ -12,6 +13,7 @@ module.exports = merge(common, {
 
   plugins: [
 
+    new CleanWebpackPlugin(["dist"]),
     new MiniCssExtractPlugin({
       filename: "[name].css"
     }),
@@ -44,6 +46,12 @@ module.exports = merge(common, {
 
           {
             loader: "css-loader",
+            options: {
+              sourceMap: true
+            }
+          },
+          {
+            loader: "postcss-loader",
             options: {
               sourceMap: true
             }

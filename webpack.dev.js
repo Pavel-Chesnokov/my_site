@@ -14,10 +14,12 @@ module.exports = merge(common, {
     aggregateTimeout: 150,
     ignored: /node_modules/
   },
-/*      devServer: {
+      devServer: {
       contentBase: './dist',
-      hot: true //включение горячей замены модулей
-    },  */
+      hot: true, //включение горячей замены модулей
+
+
+    },  
   module: {
     rules: [
       {
@@ -30,6 +32,12 @@ module.exports = merge(common, {
             options: {
               sourceMap: true
             }
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              sourceMap: true
+            },
           },
           {
             loader: "sass-loader",
@@ -45,10 +53,10 @@ module.exports = merge(common, {
      new BrowserSyncPlugin({
       host: "localhost",
       port: 3000,
-          //proxy: 'http://localhost:8080/' //включить для совместного использования
-//           },
-//            { reload: false }
-      server: { baseDir: ["dist"] },
-      files: ["./dist/*.*"]
-    } )]
+          proxy: 'http://localhost:8080/' //включить для совместного использования
+           },
+            { reload: true }
+      //server: { baseDir: ["dist"] },
+      //files: ["./dist/*.*"]
+     )]
 });
