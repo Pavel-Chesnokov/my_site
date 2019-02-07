@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-//const webpack = require('webpack');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
@@ -8,10 +9,22 @@ module.exports = {
   },
 
   output: {
-    filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist"),
-    //publicPath: '/'
+    filename: "[name].[contenthash].bundle.js",
+    path: path.resolve(__dirname, "dist")
   },
+  optimization: {
+      runtimeChunk: 'single',
+      splitChunks: {
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all'
+                 }
+               }
+             }
+      },
+
 
   module: {
     rules: [
@@ -19,10 +32,10 @@ module.exports = {
         test: /\.pug$/,
         loader: 'pug-loader',
         options: {
-          pretty: true
+        pretty: true
         }
 
-      }, 
+      },
       {
         test: /\.tsx?$/,
         use: "ts-loader",
@@ -30,13 +43,13 @@ module.exports = {
       },
 
       {
-        test: /\.(jpg|png|svg|gif)$/,
+        test: /\.(jpg|png|svg|gif|)$/,
         use: [
           {
             loader: "file-loader",
             options: {
               name: "[name].[ext]",
-              outputPath: "./img",
+              outputPath: "./src/img/",
               useRelativePath: true
             }
           },
@@ -56,9 +69,14 @@ module.exports = {
 
   plugins: [
 
+    new webpack.HashedModuleIdsPlugin(),
+    new CleanWebpackPlugin(["dist"]),
     new HtmlWebpackPlugin({
       title: "Documents",
-      template: "./src/index.pug"
+      template: "./src/index.pug",
+      favicon: "./src/img/favicon.ico"
+
+      
     }),
   ],
 

@@ -1,2 +1,3 @@
 import './style.scss';
-//import './bootstrap/bootstrap.js';
+import './bootstrap/bootstrap.js';
+
