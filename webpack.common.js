@@ -3,13 +3,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
 
+
 module.exports = {
   entry: {
     app: './src/index.ts'
   },
 
   output: {
-    filename: "[name].[contenthash].bundle.js",
+    filename: "[name].[hash].bundle.js",
     path: path.resolve(__dirname, "dist")
   },
   optimization: {
@@ -75,9 +76,9 @@ module.exports = {
       title: "Documents",
       template: "./src/index.pug",
       favicon: "./src/img/favicon.ico"
+    })
 
-      
-    }),
+    
   ],
 
 

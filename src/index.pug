@@ -1,17 +1,701 @@
 doctype html
 
 html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Seomar - SEO & Digital Marketing Bootstrap 4 Template
-        //-
-            link(rel="shortcunt icon", type="image/x-icon", href="src/img/favicon.ico" )
-        link(rel="shortcut icon", href="favicon.ico", type="image/x-icon")
-    body
-        h1 Test pugs
-        div(class="cube") 
-
-
-        
+ head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Seomar - SEO & Digital Marketing Bootstrap 4 Template
+    link(rel="shortcut icon", href="favicon.ico", type="image/x-icon")
+ body
+    // Main Wrapper Start
+    .main-wrapper
+      // Header-area start
+      header.header.header-sticky
+        .header-area.inner-header
+          .container
+            .row
+              .col-lg-4
+                // logo Start
+                .logo
+                  a(href='index.html')
+                    img(src='./src/img/logo/logo.png', alt='')
+                // // logo End
+              .col-lg-8
+                // main-menu-area Start
+                .main-menu
+                  nav.main-navigation(style='display: block;')
+                    ul
+                      li.active
+                        a(href='index.html') HOME
+                        ul.sub-menu
+                          li
+                            a(href='index.html') Home Page 1
+                          li
+                            a(href='index-2.html') Home Page 2
+                      li
+                        a(href='about.html') ABOUT
+                      li
+                        a(href='service.html') SERVICE
+                        ul.sub-menu
+                          li
+                            a(href='service-2.html') Service 2
+                          li
+                            a(href='service-3.html') Service 3
+                      li
+                        a(href='index.html') PAGES
+                        ul.sub-menu
+                          li
+                            a(href='errer-404.html') Error 404
+                          li
+                            a(href='case-studie.html') Case Study
+                          li
+                            a(href='project-details.html') Project Details
+                      li
+                        a(href='blog.html') BLOG
+                        ul.sub-menu
+                          li
+                            a(href='blog-sidebar-left.html') Blog Left Sidebar
+                          li
+                            a(href='blog-sidebar-right.html') Blog Right Sidebar
+                          li
+                            a(href='blog-details-right-sidebar.html') Blog Details Right Sidebar
+                          li
+                            a(href='blog-details-left-sidebar.html') Blog Details Left Sidebar
+                      li
+                        a(href='contact.html') CONTACT
+                // // main-menu-area End
+              .col
+                // mobile-menu start
+                .mobile-menu.d-block.d-lg-none
+                // mobile-menu end
+                // Header-area end
+                // Hero Slider start
+                .hero-slider.hero-slider-1
+                  .single-slide(style='background-image: url(src/img/slider/slide-bg-1.png)')
+                    .home-decor
+                      .home-overlay-img-1
+                        img(src='src/img/slider/seomar02.png', alt='')
+                    // Hero Content One Start
+                    .hero-content-one.container
+                      .row
+                        .col-xl-6.col-lg-7.col-md-7.order-md-1.order-2
+                          // slider-text-info Start
+                          .slider-text-info
+                            h4 Seomar
+                            h1
+                              span.color-two Seo
+                              |  & 
+                              span.color-two Degital
+                              |  Marketing
+                            p
+                              | It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                              | The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.
+                            .slider-button
+                              a.slider-btn(href='about.html') ABOUT MORE
+                          // // slider-text-info End
+                        .col-xl-6.col-lg-5.col-md-5.order-md-2.order-1
+                          // slider-inner-image Start
+                          .slider-inner-image
+                            img(src='src/img/slider/slide-inner-1.png', alt='')
+                          // // slider-inner-image End
+                          // Hero Content One End
+                          // Hero Slider end
+                          // About Us Area Start
+                          .about-us-area.section-ptb
+                            .container
+                              .row.align-items-center
+                                .col-lg-6.order-lg-1.order-2
+                                  .about-us-wrap
+                                    // section-title Start
+                                    .section-title.text-left
+                                      h4 ABOUT US
+                                      h3
+                                        | What We 
+                                        span Are
+                                    // // section-title End
+                                    // About us content Start
+                                    .about-us-content
+                                      p
+                                        | It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                                        | The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,page when looking at its layout.
+                                        | The point of using
+                                      p
+                                        | It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                                      ul
+                                        li Content of a page when looking at its layout. 
+                                        li Content of a page when looking at its layout azer duskam. 
+                                        li Content of a page when looking at its layout azer
+                                    // // About us content End
+                                .col-lg-5.offset-lg-1.order-lg-2.order-1
+                                  // about-us-image Start
+                                  .about-us-image.wow.fadeInBottom(data-wow-duration='1s', style='visibility: visible; animation-duration: 1s; animation-name: fadeInBottom;')
+                                    img(src='src/img/about/about-02.png', alt='')
+                                  // // about-us-image End
+                                  // About Us Area End
+                                  // Service Area Start
+                                  .service-area.bg-grey.section-ptb
+                                    .container
+                                      .row
+                                        .col-lg-12
+                                          // section-title Start
+                                          .section-title
+                                            h4 SERVICES
+                                            h3
+                                              | What We  
+                                              span Provide
+                                          // // section-title End
+                                      .row
+                                        .col-lg-4.col-md-6
+                                          // single-service Start
+                                          .single-service.text-center
+                                            .service-icon
+                                              span.bi.bi-screen
+                                            // // service-icon
+                                            .serviace-info
+                                              h3 Social Marketing
+                                              p
+                                                | Using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
+                                            // // serviace-info
+                                            // single-service End
+                                        .col-lg-4.col-md-6
+                                          // single-service Start
+                                          .single-service.text-center
+                                            .service-icon
+                                              span.bi.bi-responsive-device
+                                            // // service-icon
+                                            .serviace-info
+                                              h3 Web & Mobile Apps
+                                              p
+                                                | Using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
+                                            // // serviace-info
+                                            // single-service End
+                                        .col-lg-4.col-md-6
+                                          // single-service Start
+                                          .single-service.text-center
+                                            .service-icon
+                                              span.bi.bi-globe4
+                                            // // service-icon
+                                            .serviace-info
+                                              h3 SEO Management
+                                              p
+                                                | Using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
+                                            // // serviace-info
+                                            // single-service End
+                                        .col-lg-4.col-md-6
+                                          // single-service Start
+                                          .single-service.text-center
+                                            .service-icon
+                                              span.bi.bi-bond
+                                            // // service-icon
+                                            .serviace-info
+                                              h3 SEO Optimization
+                                              p
+                                                | Using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
+                                            // // serviace-info
+                                            // single-service End
+                                        .col-lg-4.col-md-6
+                                          // single-service Start
+                                          .single-service.text-center
+                                            .service-icon
+                                              span.bi.bi-tools
+                                            // // service-icon
+                                            .serviace-info
+                                              h3 Security
+                                              p
+                                                | Using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
+                                            // // serviace-info
+                                            // single-service End
+                                        .col-lg-4.col-md-6
+                                          // single-service Start
+                                          .single-service.text-center
+                                            .service-icon
+                                              span.bi.bi-paper
+                                            // // service-icon
+                                            .serviace-info
+                                              h3 Email Marketing
+                                              p
+                                                | Using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
+                                            // // serviace-info
+                                            // single-service End
+                                            // Service Area End
+                                            // Video Area Start
+                                            .video-area.video-bg.section-ptb
+                                              .container
+                                                .row.align-items-center
+                                                  .col-lg-6.col-md-8
+                                                    // Video-content-wrap Start
+                                                    .video-content-wrap
+                                                      h3
+                                                        | Play The 
+                                                        span.color-two Video
+                                                      p
+                                                        | It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of
+                                                        | using Lorem Ipsum is that it has a more-or-less normal distribution of letters.
+                                                    // // Video-content-wrap End
+                                                  .col-lg-6.col-md-4
+                                                    // Video-icon-wrap Start
+                                                    .video-icon-wrap
+                                                      a.popup-youtube(href='https://www.youtube.com/watch?v=0O2aH4XLbto')
+                                                        img(src='src/img/icon/video-icon.png', alt='')
+                                                    // // Video-icon-wrap End
+                                                    // Video Area End
+                                                    // Pricing Area Start
+                                                    .pricing-area.section-ptb
+                                                      .container
+                                                        .row
+                                                          .col-lg-12
+                                                            // section-title Start
+                                                            .section-title
+                                                              h4 PRICING
+                                                              h3
+                                                                | What We 
+                                                                span Have
+                                                            // // section-title End
+                                                        .row
+                                                          .col-lg-4.col-md-6
+                                                            // Single-pricing Start
+                                                            .single-priceing.mt--30
+                                                              .priceing-header
+                                                                h4 Primary
+                                                              .pricing-title
+                                                                h3
+                                                                  | Per Month 
+                                                                  span $
+                                                                  span.price-tb 27 
+                                                                  |  Only
+                                                                p It’s Perfect for a small business
+                                                              .pricing-body
+                                                                ul
+                                                                  li Limited Storage
+                                                                  li Contrary to popular belief
+                                                                  li Limited download
+                                                                  li 500 Gb harddisk space
+                                                                .plan-button
+                                                                  a(href='#') Choose Plan
+                                                            // // Single-pricing End
+                                                          .col-lg-4.col-md-6
+                                                            // Single-pricing Start
+                                                            .single-priceing.active.mt--30
+                                                              .priceing-header
+                                                                h4 Standrad
+                                                              .pricing-title
+                                                                h3
+                                                                  | Per Month 
+                                                                  span $
+                                                                  span.price-tb 77 
+                                                                  |  Only
+                                                                p It’s Perfect for a small business
+                                                              .pricing-body
+                                                                ul
+                                                                  li Unlimited Storage
+                                                                  li Contrary to popular belief
+                                                                  li Unlimited downloads
+                                                                  li 1000 Gb harddisk space
+                                                                .plan-button
+                                                                  a(href='#') Choose Plan
+                                                            // // Single-pricing End
+                                                          .col-lg-4.col-md-6
+                                                            // Single-pricing Start
+                                                            .single-priceing.mt--30
+                                                              .priceing-header
+                                                                h4 Premuim
+                                                              .pricing-title
+                                                                h3
+                                                                  | Per Month 
+                                                                  span $
+                                                                  span.price-tb 99 
+                                                                  |  Only
+                                                                p It’s Perfect for a small business
+                                                              .pricing-body
+                                                                ul
+                                                                  li Unlimited Storage
+                                                                  li Contrary to popular belief
+                                                                  li Unlimited download
+                                                                  li 3000 Gb harddisk space
+                                                                .plan-button
+                                                                  a(href='#') Choose Plan
+                                                            // // Single-pricing End
+                                                            // Pricing Area End
+                                                            // Testimonial Area Start
+                                                            .testimonial-area.section-pb
+                                                              .container
+                                                                .row
+                                                                  .col-lg-12.mr-auto.ml-auto.testimonial-active.slick-initialized.slick-slider
+                                                                    span.slick-prev.slick-arrow(style='display: block;')
+                                                                      apan.bi.bi-arrow-left-square
+                                                                    // testimonial-wrap Start
+                                                                    .slick-list.draggable
+                                                                      .slick-track(style='opacity: 1; width: 5850px; transform: translate3d(-1170px, 0px, 0px);')
+                                                                        .testimonial-wrap.text-center.slick-slide.slick-cloned(data-slick-index='-1', aria-hidden='true', style='width: 1170px;')
+                                                                          .testimonial-image
+                                                                            img(src='src/img/review/comment-2.jpg', alt='')
+                                                                          .testimonial-content
+                                                                            ul
+                                                                              li
+                                                                                a(href='#')
+                                                                                  img(src='src/img/icon/start.png', alt='')
+                                                                              li
+                                                                                a(href='#')
+                                                                                  img(src='src/img/icon/start.png', alt='')
+                                                                              li
+                                                                                a(href='#')
+                                                                                  img(src='src/img/icon/start.png', alt='')
+                                                                              li
+                                                                                a(href='#')
+                                                                                  img(src='src/img/icon/start.png', alt='')
+                                                                              li
+                                                                                a(href='#')
+                                                                                  img(src='src/img/icon/start-o.png', alt='')
+                                                                            p
+                                                                              | It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                                                                              | The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,page when looking at its layout. The point
+                                                                          .author-info
+                                                                            h4 Rose Jorina
+                                                                            p Fassion Designer
+                                                                        .testimonial-wrap.text-center.slick-slide.slick-current.slick-active(data-slick-index='0', aria-hidden='false', style='width: 1170px;')
+                                                                          .testimonial-image
+                                                                            img(src='src/img/review/comment-3.jpg', alt='')
+                                                                          .testimonial-content
+                                                                            ul
+                                                                              li
+                                                                                a(href='#')
+                                                                                  img(src='src/img/icon/start.png', alt='')
+                                                                              li
+                                                                                a(href='#')
+                                                                                  img(src='src/img/icon/start.png', alt='')
+                                                                              li
+                                                                                a(href='#')
+                                                                                  img(src='src/img/icon/start.png', alt='')
+                                                                              li
+                                                                                a(href='#')
+                                                                                  img(src='src/img/icon/start.png', alt='')
+                                                                              li
+                                                                                a(href='#')
+                                                                                  img(src='src/img/icon/start-o.png', alt='')
+                                                                            p
+                                                                              | It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                                                                              | The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,page when looking at its layout. The point
+                                                                          .author-info
+                                                                            h4 Anna Rose
+                                                                            p Fassion Designer
+                                                                        .testimonial-wrap.text-center.slick-slide(data-slick-index='1', aria-hidden='true', style='width: 1170px;')
+                                                                          .testimonial-image
+                                                                            img(src='src/img/review/comment-2.jpg', alt='')
+                                                                          .testimonial-content
+                                                                            ul
+                                                                              li
+                                                                                a(href='#')
+                                                                                  img(src='src/img/icon/start.png', alt='')
+                                                                              li
+                                                                                a(href='#')
+                                                                                  img(src='src/img/icon/start.png', alt='')
+                                                                              li
+                                                                                a(href='#')
+                                                                                  img(src='src/img/icon/start.png', alt='')
+                                                                              li
+                                                                                a(href='#')
+                                                                                  img(src='src/img/icon/start.png', alt='')
+                                                                              li
+                                                                                a(href='#')
+                                                                                  img(src='src/img/icon/start-o.png', alt='')
+                                                                            p
+                                                                              | It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                                                                              | The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,page when looking at its layout. The point
+                                                                          .author-info
+                                                                            h4 Rose Jorina
+                                                                            p Fassion Designer
+                                                                        .testimonial-wrap.text-center.slick-slide.slick-cloned(data-slick-index='2', aria-hidden='true', style='width: 1170px;')
+                                                                          .testimonial-image
+                                                                            img(src='src/img/review/comment-3.jpg', alt='')
+                                                                          .testimonial-content
+                                                                            ul
+                                                                              li
+                                                                                a(href='#')
+                                                                                  img(src='src/img/icon/start.png', alt='')
+                                                                              li
+                                                                                a(href='#')
+                                                                                  img(src='src/img/icon/start.png', alt='')
+                                                                              li
+                                                                                a(href='#')
+                                                                                  img(src='src/img/icon/start.png', alt='')
+                                                                              li
+                                                                                a(href='#')
+                                                                                  img(src='src/img/icon/start.png', alt='')
+                                                                              li
+                                                                                a(href='#')
+                                                                                  img(src='src/img/icon/start-o.png', alt='')
+                                                                            p
+                                                                              | It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                                                                              | The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,page when looking at its layout. The point
+                                                                          .author-info
+                                                                            h4 Anna Rose
+                                                                            p Fassion Designer
+                                                                        .testimonial-wrap.text-center.slick-slide.slick-cloned(data-slick-index='3', aria-hidden='true', style='width: 1170px;')
+                                                                          .testimonial-image
+                                                                            img(src='src/img/review/comment-2.jpg', alt='')
+                                                                          .testimonial-content
+                                                                            ul
+                                                                              li
+                                                                                a(href='#')
+                                                                                  img(src='src/img/icon/start.png', alt='')
+                                                                              li
+                                                                                a(href='#')
+                                                                                  img(src='src/img/icon/start.png', alt='')
+                                                                              li
+                                                                                a(href='#')
+                                                                                  img(src='src/img/icon/start.png', alt='')
+                                                                              li
+                                                                                a(href='#')
+                                                                                  img(src='src/img/icon/start.png', alt='')
+                                                                              li
+                                                                                a(href='#')
+                                                                                  img(src='src/img/icon/start-o.png', alt='')
+                                                                            p
+                                                                              | It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                                                                              | The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,page when looking at its layout. The point
+                                                                          .author-info
+                                                                            h4 Rose Jorina
+                                                                            p Fassion Designer
+                                                                    // // testimonial-wrap End
+                                                                    // testimonial-wrap Start
+                                                                    // // testimonial-wrap End
+                                                                    span.slick-next.slick-arrow(style='display: block;')
+                                                                      i.bi.bi-arrow-right-square
+                                                            // Testimonial Area End
+                                                            // Latest News Area Start
+                                                            .latest-news-area.section-pt.section-pb-80.bg-grey
+                                                              .container
+                                                                .row
+                                                                  .col-lg-12
+                                                                    // section-title Start
+                                                                    .section-title
+                                                                      h4 LATEST NEWS
+                                                                      h3
+                                                                        | What We 
+                                                                        span Have
+                                                                    // // section-title End
+                                                                .row.latest-blog-active.slick-initialized.slick-slider
+                                                                  span.slick-prev.slick-arrow(style='display: block;')
+                                                                    apan.bi.bi-arrow-left-square
+                                                                  .slick-list.draggable
+                                                                    .slick-track(style='opacity: 1; width: 4400px; transform: translate3d(-1200px, 0px, 0px);')
+                                                                      .col-lg-4.slick-slide.slick-cloned(data-slick-index='-3', aria-hidden='true', style='width: 400px;')
+                                                                        // single-latest-blog Start
+                                                                        .single-latest-blog.mb--30.mt--30
+                                                                          .latest-blog-image
+                                                                            a(href='blog-details-left-sidebar.html')
+                                                                              img(src='src/img/blog/blog-04.jpg', alt='')
+                                                                          .latest-blog-cont
+                                                                            h3
+                                                                              a(href='blog-details-left-sidebar.html') Keywords research is more then
+                                                                            p Lorem Ipsum available, but the majority have suffered alteration in form.
+                                                                        // // single-latest-blog End
+                                                                      .col-lg-4.slick-slide.slick-cloned(data-slick-index='-2', aria-hidden='true', style='width: 400px;')
+                                                                        // single-latest-blog Start
+                                                                        .single-latest-blog.mb--30.mt--30
+                                                                          .latest-blog-image
+                                                                            a(href='blog-details-left-sidebar.html')
+                                                                              img(src='src/img/blog/blog-06.jpg', alt='')
+                                                                          .latest-blog-cont
+                                                                            h3
+                                                                              a(href='blog-details-left-sidebar.html') For SEO marketing you have to
+                                                                            p Lorem Ipsum available, but the majority have suffered alteration in form.
+                                                                        // // single-latest-blog End
+                                                                      .col-lg-4.slick-slide.slick-cloned(data-slick-index='-1', aria-hidden='true', style='width: 400px;')
+                                                                        // single-latest-blog Start
+                                                                        .single-latest-blog.mb--30.mt--30
+                                                                          .latest-blog-image
+                                                                            a(href='blog-details-left-sidebar.html')
+                                                                              img(src='src/img/blog/blog-02.jpg', alt='')
+                                                                          .latest-blog-cont
+                                                                            h3
+                                                                              a(href='blog-details-left-sidebar.html') Keywords need to unlimited
+                                                                            p Lorem Ipsum available, but the majority have suffered alteration in form.
+                                                                        // // single-latest-blog End
+                                                                      .col-lg-4.slick-slide.slick-current.slick-active(data-slick-index='0', aria-hidden='false', style='width: 400px;')
+                                                                        // single-latest-blog Start
+                                                                        .single-latest-blog.mb--30.mt--30
+                                                                          .latest-blog-image
+                                                                            a(href='blog-details-left-sidebar.html')
+                                                                              img(src='src/img/blog/blog-01.jpg', alt='')
+                                                                          .latest-blog-cont
+                                                                            h3
+                                                                              a(href='blog-details-left-sidebar.html') Digatal marketing is one of the
+                                                                            p Lorem Ipsum available, but the majority have suffered alteration in form.
+                                                                        // // single-latest-blog End
+                                                                      .col-lg-4.slick-slide.slick-active(data-slick-index='1', aria-hidden='false', style='width: 400px;')
+                                                                        // single-latest-blog Start
+                                                                        .single-latest-blog.mb--30.mt--30
+                                                                          .latest-blog-image
+                                                                            a(href='blog-details-left-sidebar.html')
+                                                                              img(src='src/img/blog/blog-04.jpg', alt='')
+                                                                          .latest-blog-cont
+                                                                            h3
+                                                                              a(href='blog-details-left-sidebar.html') Keywords research is more then
+                                                                            p Lorem Ipsum available, but the majority have suffered alteration in form.
+                                                                        // // single-latest-blog End
+                                                                      .col-lg-4.slick-slide.slick-active(data-slick-index='2', aria-hidden='false', style='width: 400px;')
+                                                                        // single-latest-blog Start
+                                                                        .single-latest-blog.mb--30.mt--30
+                                                                          .latest-blog-image
+                                                                            a(href='blog-details-left-sidebar.html')
+                                                                              img(src='src/img/blog/blog-06.jpg', alt='')
+                                                                          .latest-blog-cont
+                                                                            h3
+                                                                              a(href='blog-details-left-sidebar.html') For SEO marketing you have to
+                                                                            p Lorem Ipsum available, but the majority have suffered alteration in form.
+                                                                        // // single-latest-blog End
+                                                                      .col-lg-4.slick-slide(data-slick-index='3', aria-hidden='true', style='width: 400px;')
+                                                                        // single-latest-blog Start
+                                                                        .single-latest-blog.mb--30.mt--30
+                                                                          .latest-blog-image
+                                                                            a(href='blog-details-left-sidebar.html')
+                                                                              img(src='src/img/blog/blog-02.jpg', alt='')
+                                                                          .latest-blog-cont
+                                                                            h3
+                                                                              a(href='blog-details-left-sidebar.html') Keywords need to unlimited
+                                                                            p Lorem Ipsum available, but the majority have suffered alteration in form.
+                                                                        // // single-latest-blog End
+                                                                      .col-lg-4.slick-slide.slick-cloned(data-slick-index='4', aria-hidden='true', style='width: 400px;')
+                                                                        // single-latest-blog Start
+                                                                        .single-latest-blog.mb--30.mt--30
+                                                                          .latest-blog-image
+                                                                            a(href='blog-details-left-sidebar.html')
+                                                                              img(src='src/img/blog/blog-01.jpg', alt='')
+                                                                          .latest-blog-cont
+                                                                            h3
+                                                                              a(href='blog-details-left-sidebar.html') Digatal marketing is one of the
+                                                                            p Lorem Ipsum available, but the majority have suffered alteration in form.
+                                                                        // // single-latest-blog End
+                                                                      .col-lg-4.slick-slide.slick-cloned(data-slick-index='5', aria-hidden='true', style='width: 400px;')
+                                                                        // single-latest-blog Start
+                                                                        .single-latest-blog.mb--30.mt--30
+                                                                          .latest-blog-image
+                                                                            a(href='blog-details-left-sidebar.html')
+                                                                              img(src='src/img/blog/blog-04.jpg', alt='')
+                                                                          .latest-blog-cont
+                                                                            h3
+                                                                              a(href='blog-details-left-sidebar.html') Keywords research is more then
+                                                                            p Lorem Ipsum available, but the majority have suffered alteration in form.
+                                                                        // // single-latest-blog End
+                                                                      .col-lg-4.slick-slide.slick-cloned(data-slick-index='6', aria-hidden='true', style='width: 400px;')
+                                                                        // single-latest-blog Start
+                                                                        .single-latest-blog.mb--30.mt--30
+                                                                          .latest-blog-image
+                                                                            a(href='blog-details-left-sidebar.html')
+                                                                              img(src='src/img/blog/blog-06.jpg', alt='')
+                                                                          .latest-blog-cont
+                                                                            h3
+                                                                              a(href='blog-details-left-sidebar.html') For SEO marketing you have to
+                                                                            p Lorem Ipsum available, but the majority have suffered alteration in form.
+                                                                        // // single-latest-blog End
+                                                                      .col-lg-4.slick-slide.slick-cloned(data-slick-index='7', aria-hidden='true', style='width: 400px;')
+                                                                        // single-latest-blog Start
+                                                                        .single-latest-blog.mb--30.mt--30
+                                                                          .latest-blog-image
+                                                                            a(href='blog-details-left-sidebar.html')
+                                                                              img(src='src/img/blog/blog-02.jpg', alt='')
+                                                                          .latest-blog-cont
+                                                                            h3
+                                                                              a(href='blog-details-left-sidebar.html') Keywords need to unlimited
+                                                                            p Lorem Ipsum available, but the majority have suffered alteration in form.
+                                                                        // // single-latest-blog End
+                                                                  span.slick-next.slick-arrow(style='display: block;')
+                                                                    i.bi.bi-arrow-right-square
+                                                            // Latest News Area End
+                                                            // Footer Area Start
+                                                            footer.footer-area.footer-bg
+                                                              // Footer-top Start
+                                                              .footer-top.pt--50.pb--100
+                                                                .container
+                                                                  .row
+                                                                    .col-lg-3.col-md-6
+                                                                      // Footer-info Start
+                                                                      .footer-info.mt--60
+                                                                        .footer-logo
+                                                                          a(href='#')
+                                                                            img(src='src/img/logo/logo-2.png', alt='')
+                                                                        p
+                                                                          | It is a long established fact that a reader will page when looking at its layout.  all reader will page when looking
+                                                                        ul.social
+                                                                          li
+                                                                            a(href='#')
+                                                                              i.bi.bi-facebook
+                                                                          li
+                                                                            a(href='#')
+                                                                              i.bi.bi-twitter-bird
+                                                                          li
+                                                                            a(href='#')
+                                                                              i.bi.bi-twitter
+                                                                          li
+                                                                            a(href='#')
+                                                                              i.bi.bi-youtube
+                                                                      // // Footer-info End
+                                                                    .col-lg-3.col-md-6
+                                                                      // Footer-info Start
+                                                                      .footer-info.mt--60
+                                                                        .footer-title
+                                                                          h3 SERVICES
+                                                                        ul.footer-list
+                                                                          li
+                                                                            a(href='#') Heating Repair
+                                                                          li
+                                                                            a(href='#') Plumbing Services
+                                                                          li
+                                                                            a(href='#') Conditioning Repair
+                                                                          li
+                                                                            a(href='#') Electrical Services
+                                                                      // // Footer-info End
+                                                                    .col-lg-3.col-md-6
+                                                                      // Footer-info Start
+                                                                      .footer-info.mt--60
+                                                                        .footer-title
+                                                                          h3 QUICK CONTACT
+                                                                        ul.footer-list
+                                                                          li
+                                                                            | Bluesitline, 4/3 north corn 
+                                                                            br
+                                                                            |  walinon, Usa.
+                                                                          li
+                                                                            a(href='#') seomar11@gmail.com
+                                                                          li
+                                                                            a(href='#') +88345 789 456
+                                                                      // // Footer-info End
+                                                                    .col-lg-3.col-md-6
+                                                                      // Footer-info Start
+                                                                      .footer-info.mt--60
+                                                                        .footer-title
+                                                                          h3 INSTAGRAM FEED
+                                                                        ul.footer-list-instagram
+                                                                          li
+                                                                            a(href='#')
+                                                                              img(src='src/img/instagram/ins-1.jpg', alt='')
+                                                                          li
+                                                                            a(href='#')
+                                                                              img(src='src/img/instagram/ins-2.jpg', alt='')
+                                                                          li
+                                                                            a(href='#')
+                                                                              img(src='src/img/instagram/ins-3.jpg', alt='')
+                                                                          li
+                                                                            a(href='#')
+                                                                              img(src='src/img/instagram/ins-4.jpg', alt='')
+                                                                          li
+                                                                            a(href='#')
+                                                                              img(src='src/img/instagram/ins-5.jpg', alt='')
+                                                                          li
+                                                                            a(href='#')
+                                                                              img(src='src/img/instagram/ins-6.jpg', alt='')
+                                                                      // // Footer-info End
+                                                                      // // Footer-top End
+                                                                      // footer-bottom Start
+                                                                      .footer-bottom
+                                                                        .container
+                                                                          .row
+                                                                            .col-lg-12
+                                                                              .footer-bottom-inner.text-center
+                                                                                p Copyright © Seomar 2018 All Right Reserved
+                                                                      // // footer-bottom End
+                                                                      // Footer Area End
+                                                                      // Main Wrapper End
+                                                                      //
